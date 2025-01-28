@@ -1,0 +1,414 @@
+Write a C++ function that takes an integer as an argument and uses an if-else statement to determine whether the number is prime or not, then returns the result.
+
+#include <bits/stdc++.h>
+using namespace std;
+bool isPrime(int n){
+    if(n<=1){
+        return false;
+    }
+    for(int i=2; i<n; i++){
+        if(n%i==0){
+            return false;
+        }
+    }
+    return true;
+}
+
+int main()
+{
+  int n;
+  cin>>n;
+  if(isPrime(n)){
+      cout<<"YES";
+  }
+  else{
+      cout<<"NO";
+  }
+
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------
+Create a C++ function that takes a temperature in Celsius as an argument and returns the corresponding category (Cold, Warm, Hot) using if-else statements.
+
+#include <bits/stdc++.h>
+using namespace std;
+string findTemp(int temp){
+    if(temp<=15){
+        return "cold";
+    }
+    else if(temp>=15 && temp<=30){
+        return "warm";
+    }
+    else{
+        return "HOT";
+    }
+}
+
+int main()
+{
+  int temp;
+  cin>>temp;
+  cout<<findTemp(temp);
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------
+Write a C++ function that takes a month as an argument and returns whether it has 30 days, 31 days, or 28/29 days using if-else statements.
+
+#include <bits/stdc++.h>
+using namespace std;
+string findDays(int monthNumber){
+    if(monthNumber==2){
+        return "28";
+    }
+    if(monthNumber>=1 && monthNumber<=12 && monthNumber%2==0 || monthNumber==8){
+        return "30";
+    }
+    if(monthNumber>=1 && monthNumber<=12 && monthNumber%2!=0){
+        return "31";
+    }
+    else{
+        return "Invalid month";
+    }
+}
+
+int main()
+{
+  int monthNumber;
+  cin>>monthNumber;
+  string ans=findDays(monthNumber);
+  cout<<ans;
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------
+Write a C++ function that takes two numbers as arguments and returns whether they are equal, or which one is larger using if-else statements and relational operators.
+
+#include <bits/stdc++.h>
+using namespace std;
+string getAns(int num1, int num2){
+    if(num1==num2){
+        return "both are equal";
+    }
+    if(num1>num2){
+        return "num1 is greater";
+    }
+    else{
+        return "num2 is greater";
+    }
+}
+int main()
+{
+  int num1, num2;
+  cin>>num1>>num2;
+  string ans=getAns(num1,num2);
+  cout<<ans;
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------
+Create a C++ function that takes a character as an argument and returns whether it is an uppercase letter or not using if-else statements.
+
+#include <bits/stdc++.h>
+using namespace std;
+string checkUpperCase(char ch){
+    if(ch>='A' && ch<='Z'){
+        return "Yes";
+    }
+    else{
+        return "NO";
+    }
+}
+int main()
+{
+  char ch;
+  cin>>ch;
+  cout<<checkUpperCase(ch);
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------
+Develop a C++ function that takes a string as an argument and returns whether it contains only digits using if-else statements.
+
+#include <bits/stdc++.h>
+using namespace std;
+string checkNum(string n){
+    for(int i=0; i<n.length(); i++){
+        if(n[i]< '0' || n[i]>'9'){
+            return "not only digit";
+        }
+    }
+    return "digit only";
+}
+int main()
+{
+  string n;
+  cin>>n;
+  string ans = checkNum(n);
+  cout<<ans;
+    return 0;
+}
+------------------------------------------------------------------------------------------------------------------------
+Write a C++ function that takes a number as an argument and returns whether it is a Fibonacci number or not using if-else statements.
+
+#include<bits/stdc++.h>
+using namespace std;
+string check(int n){
+    if(n==0 || n==1) return "true";
+    int a=0; int b=1;
+    while(b<=n){
+        int c= a+b;
+        if(c==n){
+            return "yes";
+        }
+        a=b;
+        b=c;
+    }
+    return "No";
+}
+int main()
+{
+    int n;cin>>n;
+    cout<<check(n);
+    return 0;
+}
+------------------------------------------------------------------------------------------------------------------------
+Implement a C++ function that takes a day of the month as an argument and returns the corresponding zodiac sign using if-else statements.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+string getZodiacSign(int day, int month) {
+    if (month == 1) { // January
+        if (day <= 19) return "Capricorn";
+        else return "Aquarius";
+    } else if (month == 2) { // February
+        if (day <= 18) return "Aquarius";
+        else return "Pisces";
+    } else if (month == 3) { // March
+        if (day <= 20) return "Pisces";
+        else return "Aries";
+    } else if (month == 4) { // April
+        if (day <= 19) return "Aries";
+        else return "Taurus";
+    } else if (month == 5) { // May
+        if (day <= 20) return "Taurus";
+        else return "Gemini";
+    } else if (month == 6) { // June
+        if (day <= 20) return "Gemini";
+        else return "Cancer";
+    } else if (month == 7) { // July
+        if (day <= 22) return "Cancer";
+        else return "Leo";
+    } else if (month == 8) { // August
+        if (day <= 22) return "Leo";
+        else return "Virgo";
+    } else if (month == 9) { // September
+        if (day <= 22) return "Virgo";
+        else return "Libra";
+    } else if (month == 10) { // October
+        if (day <= 22) return "Libra";
+        else return "Scorpio";
+    } else if (month == 11) { // November
+        if (day <= 21) return "Scorpio";
+        else return "Sagittarius";
+    } else if (month == 12) { // December
+        if (day <= 21) return "Sagittarius";
+        else return "Capricorn";
+    } else {
+        return "Invalid month";
+    }
+}
+
+int main() {
+    int day, month;
+    cout << "Enter day of the month: ";
+    cin >> day;
+    cout << "Enter month (1-12): ";
+    cin >> month;
+
+    string zodiacSign = getZodiacSign(day, month);
+    cout << "The zodiac sign is: " << zodiacSign << endl;
+
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------------
+Write a C++ function that takes a float as input and uses nested if-else statements to determine if the number is positive, negative, or zero, and whether it is a whole number or a fraction.
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void checkNumber(float num) {
+    if (num > 0) { // Check if positive
+        cout << "The number is positive and ";
+        if (floor(num) == num) { // Check if whole number
+            cout << "a whole number." << endl;
+        } else { // It's a fraction
+            cout << "a fraction." << endl;
+        }
+    } else if (num < 0) { // Check if negative
+        cout << "The number is negative and ";
+        if (floor(num) == num) { // Check if whole number
+            cout << "a whole number." << endl;
+        } else { // It's a fraction
+            cout << "a fraction." << endl;
+        }
+    } else { // The number is zero
+        cout << "The number is zero, which is a whole number." << endl;
+    }
+}
+
+int main() {
+    float num;
+    cout << "Enter a number: ";
+    cin >> num;
+
+    checkNumber(num);
+
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------
+Write a C++ function that takes three angles as input and uses nested if-else statements to determine if they can form a right-angled triangle, an obtuse triangle, or an acute triangle.
+#include <iostream>
+using namespace std;
+
+void classifyTriangle(int angle1, int angle2, int angle3) {
+    // Check if the angles form a valid triangle
+    if (angle1 + angle2 + angle3 == 180) {
+        // Check for triangle types
+        if (angle1 == 90 || angle2 == 90 || angle3 == 90) {
+            cout << "The triangle is a right-angled triangle." << endl;
+        } else if (angle1 > 90 || angle2 > 90 || angle3 > 90) {
+            cout << "The triangle is an obtuse triangle." << endl;
+        } else {
+            cout << "The triangle is an acute triangle." << endl;
+        }
+    } else {
+        cout << "The angles do not form a valid triangle." << endl;
+    }
+}
+
+int main() {
+    int angle1, angle2, angle3;
+
+    cout << "Enter three angles of the triangle: ";
+    cin >> angle1 >> angle2 >> angle3;
+
+    classifyTriangle(angle1, angle2, angle3);
+
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+Write a C++ function that takes the coordinates of a point (x, y) as input and uses nested if-else statements to determine in which quadrant the point lies.
+
+#include <iostream>
+using namespace std;
+
+void determineQuadrant(int x, int y) {
+    if (x > 0) { // Positive x-axis
+        if (y > 0) { // Positive y-axis
+            cout << "The point lies in Quadrant 1." << endl;
+        } else if (y < 0) { // Negative y-axis
+            cout << "The point lies in Quadrant 4." << endl;
+        } else { // y == 0
+            cout << "The point lies on the positive X-axis." << endl;
+        }
+    } else if (x < 0) { // Negative x-axis
+        if (y > 0) { // Positive y-axis
+            cout << "The point lies in Quadrant 2." << endl;
+        } else if (y < 0) { // Negative y-axis
+            cout << "The point lies in Quadrant 3." << endl;
+        } else { // y == 0
+            cout << "The point lies on the negative X-axis." << endl;
+        }
+    } else { // x == 0
+        if (y > 0) { // Positive y-axis
+            cout << "The point lies on the positive Y-axis." << endl;
+        } else if (y < 0) { // Negative y-axis
+            cout << "The point lies on the negative Y-axis." << endl;
+        } else { // x == 0 && y == 0
+            cout << "The point lies at the origin." << endl;
+        }
+    }
+}
+
+int main() {
+    int x, y;
+    cout << "Enter the coordinates of the point (x y): ";
+    cin >> x >> y;
+
+    determineQuadrant(x, y);
+
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------
+Write a C++ function that takes three integers as input and uses nested if-else statements to determine if they form an arithmetic progression (AP), geometric progression (GP), or neither.
+
+#include <iostream>
+using namespace std;
+
+void checkProgression(int a, int b, int c) {
+    // Check for Arithmetic Progression (AP)
+    if (b - a == c - b) {
+        cout << "The numbers form an Arithmetic Progression (AP)." << endl;
+    }
+    // Check for Geometric Progression (GP)
+    else if (b * b == a * c && a != 0 && c != 0) {
+        cout << "The numbers form a Geometric Progression (GP)." << endl;
+    }
+    else {
+        cout << "The numbers do not form either AP or GP." << endl;
+    }
+}
+
+int main() {
+    int a, b, c;
+    cout << "Enter three integers: ";
+    cin >> a >> b >> c;
+
+    checkProgression(a, b, c);
+
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------
+Develop a C++ function that takes a movie rating (PG, R, etc.) as input and uses nested if-else statements to determine if the movie is suitable for children, teens, or adults.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Function to check movie suitability based on rating
+void checkMovieSuitability(const string& rating) {
+    // Convert the input to uppercase for case-insensitive comparison
+    string r = rating;
+    for (char &c : r) {
+        c = toupper(c);
+    }
+
+    // Determine suitability based on rating
+    if (r == "G") {
+        cout << "The movie is suitable for children." << endl;
+    } else if (r == "PG") {
+        cout << "The movie is suitable for children and older." << endl;
+    } else if (r == "PG-13") {
+        cout << "The movie is suitable for teens and older." << endl;
+    } else if (r == "R") {
+        cout << "The movie is suitable for adults." << endl;
+    } else if (r == "NC-17") {
+        cout << "The movie is suitable for adults only." << endl;
+    } else {
+        cout << "Invalid rating. Please enter a valid rating (G, PG, PG-13, R, NC-17)." << endl;
+    }
+}
+
+int main() {
+    string rating;
+    
+    // Input movie rating
+    cout << "Enter the movie rating (G, PG, PG-13, R, NC-17): ";
+    cin >> rating;
+
+    checkMovieSuitability(rating);
+
+    return 0;
+}
+
+-------------------------------------------------------------------------------------------------------------------

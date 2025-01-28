@@ -1,0 +1,139 @@
+Write a program to check if each element in the array is a power of 2.
+
+#include <bits/stdc++.h>
+using namespace std;
+bool isPower(int num){
+    if(num==0) return false;
+    while(num>1){
+        if(num%2!=0){
+            return false;
+        }
+        num/=2;
+    }
+    return true;
+}
+
+int main()
+{
+    int arr[6]={0,2,4,5,8,16};
+    int n=6;
+    for(int num: arr){
+        if(isPower(num)){
+            cout<<"YES"<<endl;
+        }
+        else{
+            cout<<"NO"<<endl;
+        }
+    }
+
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------
+Write a program to find the sum of elements at even indices in an array.
+
+#include <bits/stdc++.h>
+using namespace std;
+int findSum(int arr[], int n){
+    int sum=0;
+    for(int i=0; i<n; i++){
+        if(i%2==0){
+            sum+=arr[i];
+        }
+    }
+    return sum;
+}
+
+
+int main()
+{
+    int arr[9]={1,2,3,4,5,6,7,8,9};
+    int n=9;
+    
+    int ans=findSum(arr,n);
+    cout<<ans;
+    
+
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------
+Write a program to find the sum of cubes of each element in the array.
+
+#include <bits/stdc++.h>
+using namespace std;
+void sumCube(int arr[], int n){
+    
+    for(int i=0; i<n; i++){
+       int cube= pow(arr[i],3);
+       cout<<cube<<" ";
+    }
+}
+int main()
+{
+    int arr[9]={1,2,3,4,5,6,7,8,9};
+    int n=9;
+    sumCube(arr,n);
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------
+Write a program to check if each element in an array is divisible by the sum of its digits.
+
+#include <bits/stdc++.h>
+using namespace std;
+int digitSum(int num){
+        int sum=0;
+        while(num>0){
+            int bit =num%10;
+            sum+=bit;
+            num/=10;
+        }
+        return sum;
+    }
+int main()
+{
+    int arr[9]={11,22,30,14,5,6,79,82,9};
+    int n=9;
+    
+    for(int i=0; i<n; i++){
+        int sum = digitSum(arr[i]);
+        if(arr[i]%sum==0){
+            cout<<"Yes"<<endl;
+         }
+         else{
+             cout<<"No"<<endl;
+         }
+    }
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------
+Write a program to find the maximum and minimum elements at odd indices separately in an array.
+
+#include<bits/stdc++.h>
+using namespace std;
+void minMax(vector<int>arr){
+    int mini=INT_MAX;
+    int maxi= INT_MIN;
+    for(int i=0; i<arr.size(); i++){
+        if(i%2!=0){
+            if(mini>arr[i]){
+                mini=arr[i];
+            }
+        }
+        if(i%2!=0){
+            if(maxi<arr[i]){
+                maxi=arr[i];
+            }
+        }
+    }
+    cout<<mini<<" "<<maxi<<"";
+}
+
+int main()
+{
+    vector<int>arr={2,3,41,45,98,5,6,61,31,21};
+    minMax(arr);
+
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------
+Write a program to find the common prime factors between each element and the index.
+

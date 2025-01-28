@@ -1,0 +1,197 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, result;
+
+    printf("Enter the first number: ");
+    scanf("%d", &a);
+
+    printf("Enter the second number: ");
+    scanf("%d", &b);
+
+    result = a + b;
+
+    printf("The result of %d + %d is: %d\n", a, b, result);
+
+    return 0;
+}
+--------------------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+    int a, b, result;
+
+    printf("Enter the first number: ");
+    scanf("%d", &a);
+
+    printf("Enter the second number: ");
+    scanf("%d", &b);
+
+    result = a - b;
+
+    printf("The result of %d - %d is: %d\n", a, b, result);
+
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+    int a, b, result;
+
+    printf("Enter the first number: ");
+    scanf("%d", &a);
+
+    printf("Enter the second number: ");
+    scanf("%d", &b);
+
+    result = a * b;
+
+    printf("The result of %d * %d is: %d\n", a, b, result);
+
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    float result;
+
+    printf("Enter the first number: ");
+    scanf("%d", &a);
+
+    printf("Enter the second number: ");
+    scanf("%d", &b);
+
+    result = (float)a / b;
+
+    printf("The result of %d / %d is: %.2f\n", a, b, result);
+
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+    int a, b, c, d, e, result;
+
+    printf("Enter the first number: ");
+    scanf("%d", &a);
+
+    printf("Enter the second number: ");
+    scanf("%d", &b);
+
+    printf("Enter the third number: ");
+    scanf("%d", &c);
+
+    printf("Enter the fourth number: ");
+    scanf("%d", &d);
+
+    printf("Enter the fifth number: ");
+    scanf("%d", &e);
+
+    result = a + b + c + d + e;
+
+    printf("The result of %d + %d + %d + %d + %d is: %d\n", a, b, c, d, e, result);
+
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+    int a, b, c, d, result;
+
+    printf("Enter the first number: ");
+    scanf("%d", &a);
+
+    printf("Enter the second number: ");
+    scanf("%d", &b);
+
+    printf("Enter the third number: ");
+    scanf("%d", &c);
+
+    printf("Enter the fourth number: ");
+    scanf("%d", &d);
+
+    result = a * b + c / 2 - d;
+
+    printf("The result of %d * %d + %d / 2 - %d is: %d\n", a, b, c, d, result);
+
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+    float a, b, c, result;
+
+    printf("Enter the value for a (1.6): ");
+    scanf("%f", &a);
+
+    printf("Enter the value for b (12): ");
+    scanf("%f", &b);
+
+    printf("Enter the value for c (2): ");
+    scanf("%f", &c);
+
+    result = a * (b - c) / 2 + 7.8 - 1.5;
+
+    printf("The result of %.1f * (%.1f - %.1f) / 2 + 7.8 - 1.5 is: %.2f\n", a, b, c, result);
+
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() {
+    int a, b, c, result;
+
+    printf("Enter the first number for multiplication: ");
+    scanf("%d", &a);
+
+    printf("Enter the second number for addition: ");
+    scanf("%d", &b);
+
+    printf("Enter the third number for subtraction inside parentheses: ");
+    scanf("%d", &c);
+
+    result = a * 1 + (b - c) / 1 + 6;
+
+    printf("The result of %d * 1 + (%d - %d) / 1 + 6 is: %d\n", a, b, c, result);
+
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+    float a, b, c, d, e, f, result;
+
+    printf("Enter the value for a (8.9): ");
+    scanf("%f", &a);
+
+    printf("Enter the value for b (1.67): ");
+    scanf("%f", &b);
+
+    printf("Enter the value for c (6.21): ");
+    scanf("%f", &c);
+
+    printf("Enter the value for d (5.6): ");
+    scanf("%f", &d);
+
+    printf("Enter the value for e (7.8): ");
+    scanf("%f", &e);
+
+    printf("Enter the value for f (34): ");
+    scanf("%f", &f);
+
+    result = a * b - (c - d) + e - f + 157;
+
+    printf("The result of %.2f * %.2f - (%.2f - %.2f) + %.2f - %.2f + 157 is: %.2f\n", a, b, c, d, e, f, result);
+
+    return 0;
+}
+

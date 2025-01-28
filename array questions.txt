@@ -1,0 +1,20 @@
+find majority element
+
+#include<bits/stdc++.h>
+using namespace std;
+int majority(vector<int>arr){
+    unordered_map<int, int>mp;
+    for(auto it: arr){
+        mp[it]++;
+        if(mp[it]>arr.size()/2){
+            return it;
+        }
+    }
+    return -1;
+}
+int main(){
+ vector<int>arr={3, 3, 4, 2, 3, 3, 3};
+ int ans= majority(arr);
+ cout<<ans;
+}
+----------------------------------------------------------------------------------------------------------------------------------

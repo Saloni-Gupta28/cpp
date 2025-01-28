@@ -1,0 +1,29 @@
+What is C?
+
+C is a general-purpose, high-level programming language that was developed by Dennis Ritchie at Bell Labs in 1972. It is widely used for system programming, developing operating systems, embedded systems, and applications due to its simplicity, flexibility, and efficiency. C provides low-level access to memory, clean syntax, and supports structured programming.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Features of C
+
+Simplicity: The syntax of C is simple and easy to learn, making it a great starting point for beginners in programming.
+
+Machine Independence: A programs can run on different machines with minimal or no modifications, making it portable.
+
+Modularity: It allows direct access to memory using pointers, making it suitable for low-level programming tasks.
+
+Rich Library: It follows a structured programming approach, using constructs like loops, conditionals, and functions to break problems into smaller sub-problems.
+
+Extensibility:C is used in various domains, from system-level programming (e.g., operating systems) to high-performance applications.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+"Hello, World!" program in C:
+
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}

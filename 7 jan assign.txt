@@ -1,0 +1,100 @@
+five friends name
+
+#include <stdio.h>
+
+int main() {
+
+    printf("My Friends' Names are:\n");
+    printf("Alisha\n");
+    printf("Bobby\n");
+    printf("chahak\n");
+    printf("Dharmendra\n");
+    printf("neha\n");
+
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------------
+
+five country name
+
+#include <stdio.h>
+
+int main() {
+
+    printf("My Favorite Countries are:\n");
+    printf("India\n");
+    printf("Japan\n");
+    printf("Canada\n");
+    printf("Australia\n");
+    printf("France\n");
+
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------
+
+five fav food name
+
+#include <stdio.h>
+
+int main() {
+
+    printf("My Favorite Foods are:\n");
+    printf("Pizza\n");
+    printf("Burger\n");
+    printf("Pasta\n");
+    printf("Sandwich\n");
+    printf("Ice Cream\n");
+
+    return 0;
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+print 98.423
+
+#include <stdio.h>
+
+int main() {
+
+      float number = 98.423;
+
+     printf("The number is: %f\n", number);
+
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+print 23
+
+#include <stdio.h>
+
+int main() {
+      int a=23;
+      printf("The number is: %d\n", a);
+
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+print 231.32
+
+#include <stdio.h>
+
+int main() {
+    
+    float number = 231.32;
+    printf("The number is: %f\n", number);
+
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+print 6745
+
+#include <stdio.h>
+
+int main() {  
+     int a= 6745;
+      printf("The number is: %d\n",a);
+
+    return 0;
+}
+
+
