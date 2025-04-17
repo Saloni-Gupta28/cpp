@@ -9,23 +9,23 @@
  * };
  */
 class Solution {
+    ListNode* solveUsingRecursion(ListNode* curr, ListNode*prev){
+        if(curr==nullptr){
+            return prev;
+        }
+       
+        ListNode* forward= curr->next;
+        curr->next= prev;
+        prev= curr;
+        curr= forward;
+      return solveUsingRecursion(curr, prev);
+    }
 public:
     ListNode* reverseList(ListNode* head) {
-     if(head==nullptr) return head;
-        ListNode* curr= head;
-         ListNode* prevv = nullptr;
-        
-
-        while(curr!=nullptr){
-            ListNode* forward = curr->next;
-           
-            curr->next= prevv;
-            prevv=curr;
-            curr= forward;
-            
-        }
-
-      return prevv;
+     ListNode* curr= head;
+     ListNode* prev= nullptr;
+    ListNode* ans= solveUsingRecursion(curr, prev);
+    return ans;
         
     }
 };
