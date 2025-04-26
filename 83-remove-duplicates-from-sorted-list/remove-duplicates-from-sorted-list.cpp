@@ -17,8 +17,6 @@ public:
         ListNode* temp= prev->next;
 
         while(temp!=nullptr){
-           
-           
             if(prev->val == temp->val){
                 prev->next= temp->next;
                 temp->next= nullptr;
@@ -28,7 +26,7 @@ public:
                 prev= prev->next;
                 temp= temp->next;
             }
-              temp=prev->next;
+            temp=prev->next;
             
         }
         return head;
