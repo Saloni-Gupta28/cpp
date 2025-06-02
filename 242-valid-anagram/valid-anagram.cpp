@@ -3,13 +3,19 @@ public:
     bool isAnagram(string s, string t) {
         if(s.size()!=t.size()) return false;
 
-        sort(s.begin(), s.end());
-        sort(t.begin(), t.end());
-        if(s!=t){
-            return false;
+        unordered_map<char,int>mp;
+        unordered_map<char,int>cp;
+
+        for(auto it: s){
+            mp[it]++;
         }
-        else{
-            return true;
+
+        for(auto it: t){
+            cp[it]++;
         }
+
+        if(mp!=cp) return false;
+        return true;
+
     }
 };
